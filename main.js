@@ -3,21 +3,21 @@ import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
+<div class="flex">
+<div class="markdown">
+<textarea name="" id="" cols="30" rows="40" onchange="CreateMD">
+
+</textarea>
+</div>
+
+<div class="preview" id="preview">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+document.getElementById('preview').innerHTML =
+marked.parse('# Marked in the browser\n\nRendered by **marked**.');
+</script>
+</div>
+</div>
 `
 
 setupCounter(document.querySelector('#counter'))
