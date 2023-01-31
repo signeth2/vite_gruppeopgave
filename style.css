@@ -1,0 +1,20 @@
+.flex{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.markdown, .preview{
+  width: 40vw;
+  height: 85vh;
+  padding: 10px;
+}
+
+.preview{
+  background-color: #ccc;
+}
+
+html{
+  overflow-y: hidden;
+}
